@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <title >The jQuery S e l e c t o r Example </title>
+            <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+            </script>
+            <link href="css1.css" rel ="stylesheet" type="text/css">
+            <script type = "text/javascript" language = "javascript">
+            $ (document).ready(function() {
+            $ ('#btnChange') . click (function(){
+            $ ('#dvDemo').attr('id','dvDemoNew');
+            $ ('#dvDemoNew').html('My New ID i s <b> dvDemoNew</b>. ') } ) ;
+            $ ('# btnReset').click (function(){
+            $ ('#dvDemoNew').attr('id','dvDemo');
+            $ ('#dvDemo').html('My ID is dvDemo.')
+            } ) ;
+            } ) ;
+            </script>
+
 <style>
  .button {
                      background-color: rgb(236, 10, 115);
-                
+                     border: none;
                   color: rgba(61, 6, 228, 0.979);
                   padding: 15px 32px;
                   text-align: center;
@@ -13,41 +29,43 @@
                   font-size: 16px;
                   margin: 4px 2px;
                   cursor: pointer;
-                }
-                    .button1 {font-size: 50px;
-                    border: darkgreen}
-                    .button2 {font-size: 12px;}
-                    .button3 {font-size: 16px;}
-                    .button4 {font-size: 20px;}
-                    .button5 {font-size: 24px;}
-               
+                }s
  .cities {
-color : rgba(12, 12, 12, 0.863) ;
+     color : rgba(12, 12, 12, 0.863) ;
 margin : 20px ;
 padding : 20px ;
 }
 </style>
 </head>
 <body>
-        <button class="button button1">happy</button>
-        <p>
- This is so good
+<input type="text"> </input>
+
+<p>
+        This is so good
         </p>
+<script>
+    $("p").css("outline","5px solid  blue");
+    $("h2").hide();
+     </script>
+
+        <button class="button">happy</button>
+
+      
         <button>
                 <input  type="button" class="button" value="Button with Function" onclick="myFunction()">
 
         </button>
-       
 
+        
+        <div id="dvDemo">
+                My ID is dvDemo 
+            
+                </div>
+        <br>
 
-<div class ="cities">
-<h2>London</h2>
-<p>London i s the c a p i t a l of England.</p>
-</div>
-<div class= "cities">
-<h2>Paris </h2>
-<p>Paris is the capital of France.</p>
-</div>
+                <br/>
+                <input type=”button” id=”btnChange” value=”ChangeID”/>
+                <input type=”button” id=”btnReset” value=”ResetID”/>
 <div class="cities">
 <h2>Tokyo</h2>
 <p>Tokyo i s the c a p i t a l of Japan.</p>
